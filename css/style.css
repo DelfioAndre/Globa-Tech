@@ -1,4 +1,4 @@
-@charset "UTF-8"
+@charset "UTF-8";
 
 /*MObile First*/
 
@@ -10,6 +10,7 @@
 :root {
     --cor1:#30c39e;
     --cor2:#0a8ea0;
+    --cor3:#000000b0;
 
     --font1:'sans-serif';
     --font2:'FontAwesome';
@@ -17,273 +18,193 @@
 }
 
 body {
-    font-family: sans-serif;
-    margin: 0px;
-    padding: 0px;
-}
+    font-family: Arial, Helvetica, sans-serif;
+    word-spacing: 2px;
+    line-height: 20px;
+    letter-spacing: 1px;
 
-html, body {
-    background-color: white;
 }
 
 header {
-    color: white;
-    background-color: rgba(0, 0, 0, 0.678);
-    padding: 30px 30px 70px 30px;
+    background-color: var(--cor3);
+    padding: 20px;
+
+}
+#header {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: space-between;
+    align-items: center;
 }
 
-header > h2 {
+header h2 {
+    /*border: 1px dashed blue;*/
     color: var(--cor1);
     font-size: 2em;
-    font-weight: bolder;
-   padding: 21px 5px 50px 50px ;
+    margin: 30px;
+    flex: 0 0 200px;
+    /*flex-basis: 200px;*/
+    
 }
-
-
-
-header >div#first  {
-    padding: 10px 40px 10px 40px;
-}
-
-
-header > span {
-    color: white;
+header span { /*Menu Hamburguer*/
+    cursor: pointer;
+    color: #fff;
+    font-weight: bold;
     text-transform: uppercase;
     background-color: var(--cor1);
-    padding: 10px;
-    position: absolute;
-    right: 5%;
-    top: 17%;
-    cursor: pointer;
-
+    border-radius: 2px;
+    padding: 8px;
+    margin: 30px;
 }
-
-header > span:hover {
+header span:hover {
     color: black;
-    background-color: white;
-    transition: .7s;
+    background-color: #fff;
+    transition: .4s;
 }
-
-menu {
-    display: none;
-    position: absolute;
-    right: 13%;
-    top: 13%;
-    padding: 0px;
-    margin: 0px;
-}
-
-header > menu > ul {
-    list-style-type: none;
-}
-
-header > menu > ul > li  {
-    display: inline-block;
-    margin: 20px;
-
-}
-
-a {
-    color: white;
-    padding: 10px;
-    text-decoration: none;
-}
-
-a:hover {
-    color: var(--cor1) ;
+header nav#menu {
+    /*border: 1px dashed blue;*/
     
+    display: none;
+    background-color: #fff;
+    padding: 10px;
+    height: 200px;
+    border-radius: 2px;
+    align-items: center;
+
+}
+header nav#menu.active {
+    display: block;  
+}
+
+header a {
+    color: var(--cor1);
+    text-decoration: none;
+    margin: 10px;
+    
+}
+header a:hover {
+    color: #fff;
+}
+header p {
+    color: #fff;
+    
+}
+
+header h4{
+    color: #fff;
+    margin: 10px 0px;
 }
 
 section {
-    color: white;
-    padding: 30px;
-    text-align: justify;
+    padding: 50px;
+    
+    
 }
 section h2 {
     text-align: center;
-    font-size: 2em;
+    margin: 25px;
 }
-
-section#sobre {
-    color: black;
-
-}
-
-div#second {
-    padding: 10px 40px 10px 40px;
-}
-
-
-
 
 section#servic {
-    background-color: var(--cor1) ;
-    position: relative;
-
+    color: #fff;
+    background-color: var(--cor1);
 }
-
-section#servic h3 {
-    padding: 0px 40px;
+section#servic div {
+    margin: 15px;
 }
-
-
-section#servic > #father {
-    padding: 2px 40px 2px 40px;
-}
-
-section#servic > div#colunas {
-    padding: 2px 40px 2px 40px;
-  
+section#servic div p {
+    color: #fff0f0;
 }
 
 section#contact {
-    color: black;
-
-
+    padding: 15px;
 }
-
-fieldset {
-    border-radius: 5px;
-    background-color: white;
-    padding: 10px 10px 50px 10px;
-
+section#contact p {
+    margin: 10px 5px;
+}
+section#contact p a{
+    color: rgba(0, 0, 0, 0.603);
+    text-decoration: none;
+    text-shadow: .5px .5px rgba(0, 0, 0, 0.295);
+}
+section#contact p a:hover {
+    color: black;
     
-    position: relative;
-    right: 0;
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.158);
 }
-fieldset h3 {
-    text-align: center;    
+section#contact  form { /*Formatacao do formulario*/
+    border-radius: 10px;
 
 }
+section#contact  form fieldset {
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-between;
+    margin: 20px;
+    
+    justify-content: center;
+    box-sizing: border-box;
+    border-radius: 10px;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.308);
+}
+section#contact form h3 {
+    text-align: center;
+    padding: 10px;
 
-form {
-    color: black;
+}
+section#contact form label {
+    padding: 10px;
     font-weight: bold;
 
 }
-
-form > label {
-    display: flexbox;
-
-}
-form input, textarea {
-    background-color: rgba(211, 211, 211, 0.384);
-    padding: 5px;
-    border-radius: 4px;
-    margin: 5px 15px 5px 5px;
-}
-form input.submit {
-    background-color: var(--cor2);
-    color: white;
-    position: absolute;
-    right: 7%;
-    bottom: 1%;
-    padding: 10px 15px 10px 15px;
+section#contact form input {
+    background-color: #8080804f;
     border-radius: 5px;
+    padding: 5px;
+    margin: 10px;
 
+}
+section#contact form textarea {
+    background-color: #8080804f;
+    border-radius: 5px;
+    margin: 5px 10px;
+}
+asaide {
+    display: flex;
+    justify-content: right;
+}
+section#contact form input.submit {
+    color: #fff;
+    font-weight: bold;
+    background-color: #0a8ea0;
+    padding: 10px 15px;
+    align-items: right;
     
 }
-
-form input.submit:hover {
-    cursor: pointer;
-    color: white;
-    background-color: rgba(0, 0, 0, 0.589);
-
+section#contact form input.submit:hover {
+    background-color: rgba(128, 128, 128, 0.644);
+    color: black;
+    box-shadow: 2px 2px 3px rgba(0, 0, 0, 0.342);
+    transition: background-color .5s;
+    transition: color .5s;
 }
-
-
 
 footer {
-     background-color: rgba(0, 0, 0, 0.829);
-    padding: 50px;
-
+    background-color: var(--cor3);
+    
+    padding: 15px;
+    height: 100px;
 }
 footer p {
-    color: white;
+    color: #fff;
     text-align: center;
+    margin: 15px;
 }
+footer p a {
+    color: #fff;
+    text-decoration: none;
 
-/*--------------------Media Query DeskTop------------------*/
-
-
-@media screen and (min-width: 768px) {
-
-    header {
-        padding: 2% 10%;
-    }
-
-    header >h2, header > ul {
-        padding: 2% 10%;
-        width:40%;
-    }
-    
-    menu {
-        display: block;
-        display: flexbox
-        ;
-        flex-direction: row;
-        position: absolute;
-        right: 5%;
-        top: 13%;
-
-    }
-
-    span {
-        display: none;
-    }
-
-    header > div#first {
-        margin: 20px;
-
-        display: block;
-        width: 70%;
-
-    }
-
-    section {
-        padding: 2% 10%;
-    }
-
-
-    section#servic > div#father {
-        display: flex;
-        flex-wrap: wrap;
-        max-width: 800px;
-        
-    }
-    div#colunas {
-        flex: 1 1 200px;
-        
-    }
-
-    form {
-        align-items: center;
-        max-width: 60%;
-        height: 4;
-        margin: auto;
-
-    }
-
-    form input, textarea {
-    padding: 5px 3px 5px 6px;
-    margin-left: 30px;
-    width: 35%;
-   
-
-
-    }
-    input#enviar {
-        width: 17%;
-        
-    }
-
-    label {
-        font-size: 1.2em;
-    }
-
-
-
-
-
+}
+footer p a:hover {
+    color: var(--cor2);
+    transition: .2s;
 }

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/style.css" >
     <link rel="stylesheet" href="css/all.css">
     <link rel="stylesheet" href="https://fonts.googleapsi.com/icon?family=Material+Icons" role="stylesheet">
     
@@ -14,25 +14,26 @@
 <body>
     <header>
 
-        <h2>Global Tech</h2>
-        <!--<img src="imagens/icons/menu_FILL0_wght400_GRAD0_opsz24.png" id="burguer" alt=""-->
-        <span id="burguer" onclick="clickMenu()">menu</span>
-        <menu id="itens">
-            <ul>
-                <li><a href="#">Home</a></li>
-                <li><a href="#servic">Serviços</a></li>
-                <li><a href="#sobre">sobre nos</a></li>
-                <li><a href="#contact">contactos</a></li>
-            </ul>
-        </menu>
+        <div id="header">
+            <h2>Global Tech</h2>
+            <!--<img src="imagens/icons/menu_FILL0_wght400_GRAD0_opsz24.png" id="burguer" alt=""-->
+            <span id="burguer" onclick="toggleMenu()">menu</span>
+            
+            <nav id="menu" class="menu">
+                <a href="#">Home</a>
+                <a href="#servic">Serviços</a>
+                <a href="#sobre">sobre nos</a>
+                <a href="#contact">contactos</a>
+            </nav>
+        </div>
 
-
-            <div id="first">
-                <h4>Tudo sobre TI a um click de si</h4>
-                <p>Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus</p>
-            </div>
-
+    <div id="first">
+        <h4>Tudo sobre TI a um click de si</h4>
+        <p>Nulla viverra pharetra sem, eget pulvinar neque pharetra ac int. lorem ipsum Vestibulum. placerat placerat dolor. Vestibulum at dui nunc. Nullam eu elit neque lectus. Aliquam erat volutpat. Nullam ac mattis mi. Donec tincidunt leoelit dictum viverra luctus</p>
+    </div>
     </header>
+
+
 
     <section id="sobre">
         <h2>Sobre nós</h2>
@@ -47,35 +48,31 @@
 
     <section id="servic">
             <h2>Serviços</h2>
-            <h3>Web Desemvolvimento </h3>
-            <div id="father">
-                <div id="colunas">
+            
+            <article>
+
+                <div class="esq">
+                    <h3>Web Desemvolvimento </h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
+                </div>
+            
+                <div class="dir">
+                    <h3>Photoshop</h3>
                 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                 </div>
-            </div>
-            <h3>Photoshop</h3>
-            <div id="father">
-                <div id="colunas">
+            
+                <div class="esq">
+                    <h3>Design Grafico</h3>
                 
                     <p>Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                 </div>
-            </div>
-            <h3>Design Grafico</h3>
-            <div id="father">
-                <div id="colunas">
-                
+            
+                <div class="dir">
+                    <h3>Hardware</h3>    
                     <p>Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
                 </div>
-            </div>
-            <h3>Hardware</h3>
-            <div id="father">
-                <div id="colunas">
-                
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisci ngelit. In euismod faucibus quam. placerat placerat dolor. Vestibulum</p>
-                </div>
-            </div>
-        </div>
+        </article>
 
 
     </section>
@@ -84,29 +81,31 @@
         <h2>Contacte-nós</h2>
         <h3>Info</h3>
         <p>(+258) 876817097 // 848817097</p>
-        <p>globaltech@gmail.com</p>
+        <p><a href="mailto:globaltech@gmail.com" target="_blank">globaltech@gmail.com</a></p>
 
 
         <form action="#" method="post">
             <fieldset>
                 <h3>Formulário de Submisão</h3>
-                <p>
-                    <label for="inome">Nome</label>
-                    <input type="text" name="nome" id="inome" placeholder="Nome" maxlength="30">
-                </p>
-                <p>
-                    <label for="imail">Email</label>
-                    <input type="email" name="email" id="imail" placeholder="email@gmail.com" maxlength="30">
-                </p>
-                <p>
-                    <label for="icll">Phone</label>
-                    <input type="tel" name="cell" id="icll" placeholder="(+258) xx xxx xxxx">
-                </p>
-                <p>
-                    <label for="imsg">Mensagem</label>
-                    <textarea name="msg" id="imsg" cols="30" rows="5" placeholder="Mensagem..."></textarea>
-                </p>
-                <input type="submit" id="enviar" value="Enviar" class="submit">
+                <div>
+                    <p>
+                        <label for="inome">Nome</label>
+                        <input type="text" name="nome" id="inome" placeholder="Nome" maxlength="30">
+                    </p>
+                    <p>
+                        <label for="imail">Email</label>
+                        <input type="email" name="email" id="imail" placeholder="email@gmail.com" maxlength="50">
+                    </p>
+                    <p>
+                        <label for="icll">Phone</label>
+                        <input type="tel" name="cell" id="icll" placeholder="(+258) xx xxx xxxx">
+                    </p>
+                    <p>
+                        <label for="imsg">Mensagem</label>
+                        <textarea name="msg" id="imsg" cols="30" rows="5" placeholder="Mensagem..."></textarea>
+                    </p>
+                    <asaide><input type="submit" id="enviar" value="Enviar" class="submit"></asaide>
+                </div>
             </fieldset>
         </form>
 
@@ -114,26 +113,32 @@
     </section>
 
     <footer>
-        <p> &copy; 2023Global Tech  ||<a href="#" target="_blank">Délfio André</a> & <a href="#" target="_blank">Natalino Queba</a></p> 
+        <p> &copy; 2023 <a href="#" target="_blank">Global Tech</a>  || <a href="#" target="_blank">Délfio André</a> <!-- & <a href="#" target="_blank">Natalino Queba</a>--></p> 
 <a href=""></a>
     </footer>
     <script>
-        function mudouTamanho() {
-            if (window.innerWidth >= 768) {
+        /*function mudouTamanho() {
+            if (window.innerWidth >= 678) {
                 itens.style.display = 'block'
             } else {
                 itens.style.display ='none'
             }
         }
+        */
 
-        function clickMenu() {
-            if (itens.style.display == 'block'){
-                itens.style.display ='none'
-            } else {
-                itens.style.display ='block'
-            }
-            
+            function toggleMenu() {
+            const menu = document.getElementById("menu");
+            menu.classList.toggle("active");
         }
+            
+        
+
+       /* function clickMenu() {
+            const nav = document.getElementById("nav");
+            nav.classList.click("active");
+        }
+        */
+
     </script>
 </body>
 </html>
