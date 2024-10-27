@@ -66,28 +66,30 @@ header nav#menu {
     position: absolute;
     top: 50;
     left: 50;
-    transform: translate(80px, 90px);
+    transform: translate(470px, 101px);
     
     display: none;
-    background-color: #fff;
+    background-color: #ffffff;
     padding: 10px;
-    height: 100px;
+    height: 130px;
     border-radius: 2px;
     align-items: center;
 
 }
 header nav#menu.active {
     display: block;  
+    
 }
 
 header a {
-    color: var(--cor1);
+    display: block;
+    color: black;
     text-decoration: none;
     margin: 10px;
     
 }
 header a:hover {
-    color: #fff;
+    color: var(--cor1);
 }
 header p {
     color: #fff;

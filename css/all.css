@@ -2,6 +2,28 @@
 
 @media (min-width: 481px) {
 
+    #header {
+
+    }
+
+    header span { /*Menu 
+    Hamburguer*/
+
+
+    }
+    header span:hover {
+
+    }
+    header nav#menu {
+
+
+
+    
+    }
+    header nav#menu.active {
+        display: block;  
+    }
+
 
 
     section {
